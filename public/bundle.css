@@ -1,0 +1,42 @@
+/*!
+Project Name: Ana's website
+Author: Ana Duspara
+Author URI: http://www.anaduspara.com
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+body {
+  padding: 0;
+  margin: 0;
+  /* .info-holder {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  .project-details{
+    ul{
+      li{
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+  }
+} */ }
+  body img {
+    border: 2px solid red; }
+
+.komiks .info-holder {
+  display: none;
+  margin: 15px; }
+  @media screen and (min-width: 1200px) {
+    .komiks .info-holder {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      z-index: 2; } }
+
+/*# sourceMappingURL=bundle.css.map*/

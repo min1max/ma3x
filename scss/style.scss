@@ -1,0 +1,151 @@
+/*!
+Project Name: Ana's website
+Author: Ana Duspara
+Author URI: http://www.anaduspara.com
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+@mixin mQ($arg...){
+  @if length($arg) == 1{
+    @media screen and (max-width: nth($arg, 1)){
+      @content;
+    }
+  }
+  @if length($arg) == 2{
+    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2)){
+      @content;
+    }
+  }
+}
+
+@mixin mQ-min($arg...){
+  @if length($arg) == 1{
+    @media screen and (min-width: nth($arg, 1)){
+      @content;
+    }
+  }
+  @if length($arg) == 2{
+    @media screen and (min-width: nth($arg, 1)) and (min-width: nth($arg, 2)){
+      @content;
+    }
+  }
+}
+
+
+@mixin mQmin-h($arg...){
+    @media screen and (min-height: nth($arg, 1)){
+      @content;
+    }
+}
+
+
+@mixin mQmin-w($arg...){
+    @media screen and (min-width: nth($arg, 1)){
+      @content;
+    }
+}
+
+
+@mixin mQmax-h($arg...){
+    @media screen and (max-height: nth($arg, 1)){
+      @content;
+    }
+}
+
+@mixin grid($cols, $mgn){
+  float: left;
+  margin-right: $mgn;
+  width: ((100% - (($cols - 1) * $mgn)) / $cols);
+  &:nth-of-type(#{$cols}){
+    margin-right: 0;
+  }
+}
+
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+}
+
+@mixin over {
+    &:hover, &:focus {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+body {
+	padding: 0;
+	margin: 0;
+	img {
+		border: 2px solid red;
+	}
+
+
+/* .info-holder {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  .project-details{
+    ul{
+      li{
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+  }
+} */
+
+
+}
+
+
+
+.komiks {
+  .info-holder {
+    display: none;
+    margin: 15px;
+    @include mQmin-w( 1200px ) {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      z-index: 2;
+    }
+  }
+}

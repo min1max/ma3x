@@ -1,0 +1,273 @@
+html,
+body,
+div{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+section {
+    display: block
+}
+body {
+    line-height: 1
+}
+
+
+.komiks .arr-next-holder {
+    display: none
+}
+@media all and (min-width: 1200px) {
+    .komiks .arr-next-holder {
+        display: block;
+        position: absolute;
+        border-top: 1px solid black;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        cursor: pointer
+    }
+}
+
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    outline: 0;
+    width: 36px;
+    height: 36px
+}
+.button .btn-bg {
+    position: absolute;
+    z-index: 2
+}
+.button .btn-bg.circle {
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%
+}
+.button .btn-icon {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%
+}
+
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+body {
+    height: 100%;
+    background-color: #EFEEEA
+}
+body:before {
+    content: "phone";
+    display: none
+}
+@media all and (min-width: 768px) {
+    body:before {
+        content: "tablet"
+    }
+}
+@media all and (min-width: 1200px) {
+    body:before {
+        content: "desktop"
+    }
+}
+body.menu-open {
+    background-color: #333
+}
+@media all and (min-width: 768px) {
+    body.menu-open {
+        background-color: #EFEEEA
+    }
+}
+* {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text
+}
+
+#content-wrapper {
+    position: relative;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    z-index: 0;
+    min-height: 100%
+}
+@media all and (min-width: 1200px) {
+    #content-wrapper {
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-right: 10px
+    }
+}
+#content-wrapper main {
+    width: 100%;
+    min-height: 100%
+}
+
+
+
+.komiks {
+    background-color: white
+}
+.komiks .viewports-holder {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    background-color: white;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    cursor: pointer
+}
+.komiks .viewport {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    top: 15%;
+    height: 70%
+}
+.komiks .viewport .page {
+    opacity: 1;
+    position: relative;
+    display: inline-block;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #F5F5F5
+}
+.komiks .viewport .page .frame {
+    cursor: pointer;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: absolute
+}
+
+.komiks .controls-desktop {
+    display: none
+}
+@media all and (min-width: 1200px) {
+    .komiks .controls-desktop {
+        display: block;
+        position: fixed;
+        z-index: 5;
+        bottom: 20px;
+        right: 30px;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+    .komiks .controls-desktop>* {
+        position: absolute;
+        bottom: 0
+    }
+    .komiks .controls-desktop span {
+        right: 40px;
+        display: inline-block;
+        width: 50px;
+        height: 36px;
+        line-height: 36px;
+        padding-right: 20px;
+        text-align: left;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        vertical-align: middle
+    }
+    .komiks .controls-desktop .zoom {
+        right: 90px
+    }
+    .komiks .controls-desktop .btn-download {
+        right: 0px
+    }
+}
+.komiks .controls-mobile {
+    position: fixed;
+    z-index: 6;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+@media all and (min-width: 768px) {
+    .komiks .controls-mobile {
+        left: 30px;
+        right: 30px;
+        bottom: 30px
+    }
+}
+.komiks .controls-mobile>* {
+    position: absolute;
+    bottom: 0
+}
+.komiks .controls-mobile .btn-prev {
+    left: 0
+}
+.komiks .controls-mobile .btn-next {
+    right: 0
+}
+.komiks .controls-mobile .zoom {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+@media all and (min-width: 1200px) {
+    .komiks .controls-mobile {
+        display: none
+    }
+}
+.komiks #player-container {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    pointer-events: none
+}

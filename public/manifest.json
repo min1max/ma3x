@@ -1,0 +1,26 @@
+{
+  "short_name": "Ma3xSpace",
+  "name": "Ma3x Space  Creative Operations",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#317EFB",
+  "background_color": "#fff",
+  "description": "Coding and Digital studio.",
+  "icons": [
+  	{
+    "src": "/public/img/icons/homescreen48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+	  }, 
+	  {
+	    "src": "/public/img/icons/homescreen72.png",
+	    "sizes": "72x72",
+	    "type": "image/png"
+	  },
+	  {
+	    "src": "/public/img/icons/homescreen512.png",
+	    "sizes": "512x512",
+	    "type": "image/png"
+	  }	  
+]
+}
